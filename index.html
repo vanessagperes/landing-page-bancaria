@@ -97,7 +97,7 @@
             
             if(nome && telefone && email && divida) {
                 let mensagem = `Olá, meu nome é ${nome}. Tenho uma dívida de R$${divida} e gostaria de saber se posso reduzir o valor. Meu telefone: ${telefone}, Email: ${email}.`;
-                let url = `https://wa.me/5535988821548?text=${encodeURIComponent(mensagem)}`;
+                let url = `https://wa.me/+5535988821548?text=${encodeURIComponent(mensagem)}`;
                 window.open(url, "_blank");
             } else {
                 alert("Por favor, preencha todos os campos antes de continuar!");
