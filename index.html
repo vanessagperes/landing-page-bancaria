@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduza Sua Dívida Agora!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #d9534f;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        .benefits {
+            text-align: left;
+            margin: 20px 0;
+        }
+        .benefits li {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .cta-button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JUROS ABUSIVOS? DESCUBRA SE VOCÊ PODE REDUZIR SUA DÍVIDA!</h1>
+        <p>Seu banco pode estar cobrando taxas ilegais! Descubra agora se você pode reduzir sua dívida.</p>
+        
+        <ul class="benefits">
+            <li>✅ Reduza sua dívida em até 70%</li>
+            <li>✅ Pare de pagar juros abusivos</li>
+            <li>✅ Evite negativação no Serasa e SPC</li>
+            <li>✅ Atendimento sem burocracia</li>
+        </ul>
+        
+        <h2>Solicite uma análise gratuita:</h2>
+        <form id="leadForm">
+            <div class="form-group">
+                <input type="text" id="nome" placeholder="Seu Nome" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="telefone" placeholder="Seu Telefone" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Seu E-mail" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="divida" placeholder="Valor da Dívida" required>
+            </div>
+            <a href="#" onclick="enviarWhatsApp()" class="cta-button">📲 Fale Agora no WhatsApp</a>
+        </form>
+    </div>
+    
+    <script>
+        function enviarWhatsApp() {
+            let nome = document.getElementById("nome").value;
+            let telefone = document.getElementById("telefone").value;
+            let email = document.getElementById("email").value;
+            let divida = document.getElementById("divida").value;
+            
+            if(nome && telefone && email && divida) {
+                let mensagem = `Olá, meu nome é ${nome}. Tenho uma dívida de R$${divida} e gostaria de saber se posso reduzir o valor. Meu telefone: ${telefone}, Email: ${email}.`;
+                let url = `https://wa.me/SEUNUMERODEWHATSAPP?text=${encodeURIComponent(mensagem)}`;
+                window.open(url, "_blank");
+            } else {
+                alert("Por favor, preencha todos os campos antes de continuar!");
+            }
+        }
+    </script>
+</body>
+</html>
